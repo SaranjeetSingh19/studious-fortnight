@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Chillax Semibold";
+  src: url("../public/Chillax-Medium.ttf") format(".ttf");
+}
+
+body {
+  background-color: #e0e6ec;
+  font-family: "Chillax Semibold", "Gilroy ExtraBold", "Roboto Flex" !important;
+}
+
+/* ::-webkit-scrollbar {
+    width: 10px;
+  } */
+  
+  /* Track */
+  /* ::-webkit-scrollbar-track {
+    background: #002D33; 
+  } */
+  
+  /* Handle */
+  /* ::-webkit-scrollbar-thumb {
+    background: #26408d; 
+    border-radius: 20px;
+  }
+   */
