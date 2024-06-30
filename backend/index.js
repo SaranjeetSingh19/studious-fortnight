@@ -36,9 +36,7 @@ app.use("/api/category", categoryRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/upload", uploadRoutes);
 
-app.get("/", (req, res) => {
-  res.status(200).send("Working...");
-});
+ 
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "/frontend/dist")));
