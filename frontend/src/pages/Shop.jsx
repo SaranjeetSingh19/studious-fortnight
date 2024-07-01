@@ -78,13 +78,19 @@ const Shop = () => {
 
   return (
     <>
-      <div className="container mx-auto pl-16 ">
-        <h1 className="text-[3.5rem] border-b-2 border-black">Shop.</h1>
+      <div className="container mx-auto md:pl-20 pl-0">
+        <div className="ml-8 md:ml-0">
+        <h1 className="md:text-[3.5rem] text-[2rem] border-b-2 md:pl-0 border-black">Shop.</h1>
+
+        </div>
         <div className="flex md:flex-row">
-          <div className="p-3 h-max mt-2 mb-2">
-            <h2 className="text-white py-2 text-center mb-2 rounded-full bg-rose-400">
+          <div className="p-3 h-max  mt-2 mb-2">
+            <div className="px-8 md:px-0">
+            <h2 className="text-white text-sm md:text-lg py-2 text-center mb-2 rounded-full bg-rose-400">
               Filtered By Categories
             </h2>
+            </div>
+           
             <div className="p-5 w-[15rem] ">
               {categories?.map((c) => (
                 <div key={c._id} className="mb-2">
@@ -108,9 +114,12 @@ const Shop = () => {
                 </div>
               ))}
             </div>
-            <h2 className="py-2 text-center bg-rose-400 text-white rounded-full mb-2">
-              Filter by Brands
+            
+            <div className="px-8 md:px-0">
+            <h2 className="text-white text-sm md:text-lg py-2 text-center mb-2 rounded-full bg-rose-400">
+              Filtered By Brands
             </h2>
+            </div>
 
             <div className="p-5">
               {uniqueBrands?.map((brand, i) => (
@@ -133,10 +142,11 @@ const Shop = () => {
                   </div>
               ))}
             </div>
-            <h2 className="text-center py-2 bg-emerald-400 rounded-full mb-2">
-              Filter by Price
+            <div className="px-8 md:px-0">
+            <h2 className="text-white text-sm md:text-lg py-2 text-center mb-2 rounded-full bg-green-400">
+              Filtered By Price
             </h2>
-
+            </div>
             <div className="p-5 w-[15rem]">
               <input
                 type="text"

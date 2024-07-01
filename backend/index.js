@@ -46,6 +46,9 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
+app.use("/uploads", express.static(path.join(__dirname + "/uploads")));
+
+
 app.listen(port, () => {
   console.log(`Server is running on Port: ${port}`);
   connectDb(mongoURI);
