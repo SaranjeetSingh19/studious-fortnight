@@ -70,6 +70,7 @@ const AdminDashboard = () => {
         x: item._id,
         y: item.totalSales,
       }));
+       
 
       setState((prevState) => ({
         ...prevState,
