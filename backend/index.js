@@ -28,6 +28,8 @@ app.use(express.urlencoded({ extended: true })); // to parse body data
 app.use(cookieParser());
 
 app.use(cors());
+const __dirname = path.resolve();
+
 
 app.use("/api/users", userRoutes);
 app.use("/api/orders", orderRoutes);
@@ -46,7 +48,6 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-const __dirname = path.resolve();
 app.use("/uploads", express.static(path.join(__dirname + "/uploads")));
 console.log(__dirname); 
 
