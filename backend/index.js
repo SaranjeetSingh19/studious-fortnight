@@ -21,7 +21,6 @@ cloudinary.v2.config({
 
 const app = express();
 const port = process.env.PORT || 5000;
-const __dirname = path.resolve();
 const mongoURI = process.env.MONGO_URI;
 
 app.use(express.json({ limit: "5mb" })); // to parse body data
@@ -38,6 +37,7 @@ app.use("/api/upload", uploadRoutes);
 
  
 
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
@@ -46,8 +46,9 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
+const __dirname = path.resolve();
 app.use("/uploads", express.static(path.join(__dirname + "/uploads")));
-
+console.log(__dirname); 
 
 app.listen(port, () => {
   console.log(`Server is running on Port: ${port}`);
